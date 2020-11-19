@@ -1,0 +1,47 @@
+.form-div {
+    margin-left: 39%;
+    display: inline-grid;
+}
+input[type=text], input[type=password] {
+    width: 160%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  img.avtar {
+    width: 15%;
+}
+  form {border: 3px solid #f1f1f1;}
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 160%;
+}
+.img {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.fogot {
+    margin-top: 7%;
+    /* margin-left: 67%; */
+    position: relative;
+    left: 71%;
+}
+button:hover {
+    opacity: 0.8;
+  }
+  button.cancel {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.cancel-fog-pass {
+    display: inline-flex;
+}

@@ -1,0 +1,74 @@
+<h2 *ngIf="!isShown">Login Form</h2>
+<div style="overflow-x: hidden !important; ">
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <div class="img" *ngIf="!isShown">
+                    <img src="assets/img_avatar2.png" class="avtar">
+                </div>
+
+                <div class="form-div" *ngIf="!isShown">
+
+                    <label for="uname"><b>UserName</b></label>
+
+                    <input type="text" placeholder="Enter Username" name="name" required minlength="4"
+                        appForbiddenName="bob" [(ngModel)]="model.name" #name="ngModel">
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="model.pass"
+                        required>
+                    <button (click)="validate()">Submit</button>
+                    <label>
+                        <input type="checkbox" checked="checkbox" name="remember">Remember me</label>
+
+
+                </div>
+                <div class="form-div">
+                    <div class="cancel-fog-pass"><button class="cancel">Cancel</button>
+                        <div (click)="toggleShow()" class="fogot">Forgot <a href="#">password?</a></div>
+                        <div *ngIf="isShown" class="row container-fluid" id="divshow">
+                            <!-- <a href="#"> SMS or Email</a> -->
+                            <div class="row">
+                                <div class="col-12">
+
+
+                                    <div>
+                                         <input type="radio" (click)="clickedAction('phone')"
+                                                name="a">
+                                        <span>Phone No</span>
+                                    </div>
+                                    <div class="" *ngIf="phone">
+                                            <label>Enter Dob</label>
+                                        <input type="date" [(ngModel)]="mode.dob" name="person"><br>
+                                        <label>Enter the UserName</label>
+                                        <input type="text" required [(ngModel)]="mode.user" name="person"><br>
+                                    
+                                       <button (click)=checkdob()>Next</button>
+                                    </div>
+
+
+                                    <div>
+                                         <input type="radio" (click)="clickedAction('email')" checked
+                                                name="a">
+                                        <span>Email Id</span>
+                                    </div>
+                                    <div class="" *ngIf="email">
+                                            <label>Enter Dob</label>
+                                            <input type="date" [(ngModel)]="mode.dob" required name="person"><br>
+                                            <label>Enter the UserName</label>
+                                            <input type="text" required [(ngModel)]="mode.user" name="person"><br>
+                                      
+                                        <button  (click)=checkdob()>Next</button>
+                                    </div>
+
+                                    <!-- <button (click)="clickbtn()">Next</button> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
